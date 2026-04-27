@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: book_recommendation_postgres
+    environment:
+      POSTGRES_DB: bookdb
+      POSTGRES_USER: bookuser
+      POSTGRES_PASSWORD: bookpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - book_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  book_postgres_data:
