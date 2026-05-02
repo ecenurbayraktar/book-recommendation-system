@@ -1,4 +1,4 @@
-package com.ece.book_recommendation.service;
+/*package com.ece.book_recommendation.service;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.ece.book_recommendation.model.Book;
 import com.ece.book_recommendation.repository.BookRepository;
-@Configuration
+//@Configuration
 public class DataLoader {
     @Bean
     CommandLineRunner loadData(BookRepository bookRepository) {
@@ -81,3 +81,4 @@ public class DataLoader {
         }
     }
 }
+*/

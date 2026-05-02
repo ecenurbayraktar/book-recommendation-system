@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BookBloom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <h1>🌸 BookBloom</h1>
+
+        <input id="search" placeholder="Search books..." onkeyup="searchBooks()">
+
+        <div id="bookList" class="grid"></div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <h2>💖 Recommended</h2>
+        <div id="recommendList"></div>
+
+        <br>
+
+        <h2>⭐ Favorites</h2>
+        <div id="favoriteList"></div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

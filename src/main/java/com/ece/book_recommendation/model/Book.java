@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "books")
 public class Book {
-@Id
-    private String bookId;
+    @Id
+@Column(name = "book_id")
+private String bookId;
 
     @Column(length = 1000)
     private String title;
@@ -16,18 +17,24 @@ public class Book {
     @Column(length = 1000)
     private String publisher;
 
+    @Column(name = "published_date")
     private String publishedDate;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(name = "page_count")
     private Integer pageCount;
 
     @Column(length = 1000)
     private String categories;
 
+
+@Column(name = "average_rating")
     private Double averageRating;
 
+
+@Column(name = "ratings_count")
     private Integer ratingsCount;
 
     @Column(length = 1000)
@@ -36,7 +43,7 @@ public class Book {
     @Column(length = 1000)
     private String thumbnail;
 
-    @Column(length = 1000)
+    @Column(name = "search_category")
     private String searchCategory;
 
     public Book() {

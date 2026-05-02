@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffe4f1, #fff6fb);
+    color: #5c3a4d;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(255, 143, 190, 0.25);
+    text-align: center;
+    width: 420px;
+}
+
+h1 {
+    font-size: 42px;
+    color: #d94f91;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #7a5a6b;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.primary {
+    background: #ff8fc7;
+    color: white;
+}
+
+.secondary {
+    background: #fff0f7;
+    color: #d94f91;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid #ffd6e7;
+    outline: none;
+}
+.big {
+    width: 700px;
+}
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.book {
+    background: #fff0f7;
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.book h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.book p {
+    font-size: 13px;
+}
+
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+    background: #fff0f7;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.book {
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
