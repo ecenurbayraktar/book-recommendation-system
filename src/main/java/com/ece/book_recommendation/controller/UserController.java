@@ -5,6 +5,7 @@ import com.ece.book_recommendation.repository.UserRepository;
 import java.util.List;
 @RestController
 @RequestMapping("/users")
+@CrossOrigin
 public class UserController {
 
     private final UserRepository userRepository;
@@ -13,14 +14,19 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @PostMapping
-    public User createUser(@RequestParam String username,
-                           @RequestParam String email,
-                           @RequestParam String password) {
-        return userRepository.save(new User(username, email, password));
+    @PostMapping("/register")
+    public User register(@RequestBody User user) {
+        return userRepository.save(user);
     }
-    @GetMapping
-public List<User> getAllUsers() {
-    return userRepository.findAll();
-}
+
+    @PostMapping("/login")
+    public User login(@RequestBody User user) {
+        User found = userRepository.findByEmail(user.getEmail());
+
+        if (found != null && found.getPassword().equals(user.getPassword())) {
+            return found;
+        } else {
+            throw new RuntimeException("Invalid credentials");
+        }
+    }
 }
