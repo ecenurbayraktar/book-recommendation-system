@@ -62,10 +62,10 @@ public class FavoriteService {
     }
 
     // ilk favorinin kategorisini al (şimdilik basit yapıyoruz)
-    String category = favorites.get(0).getBook().getCategories();
+    String genre = favorites.get(0).getBook().getGenres();
 
     return bookRepository
-            .findByCategoriesContainingIgnoreCase(category, Pageable.ofSize(5))
+            .findByGenresContainingIgnoreCase(genre, Pageable.ofSize(5))
             .getContent();
 }
 }

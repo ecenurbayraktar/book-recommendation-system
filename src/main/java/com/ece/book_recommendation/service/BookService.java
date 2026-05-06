@@ -27,14 +27,14 @@ public class BookService {
     }
 
     public Page<Book> getBooksByCategory(String category, int page, int size) {
-        return bookRepository.findByCategoriesContainingIgnoreCase(category, PageRequest.of(page, size));
+        return bookRepository.findByGenresContainingIgnoreCase(category, PageRequest.of(page, size));
     }
 
     public List<String> getAllCategories() {
-        return bookRepository.findAllCategories();
+        return bookRepository.findAllGenres();
     }
 
     public List<Book> filterByCategory(String category) {
-        return bookRepository.findByCategoryLike(category);
+        return bookRepository.findByGenreLike(category);
     }
 }

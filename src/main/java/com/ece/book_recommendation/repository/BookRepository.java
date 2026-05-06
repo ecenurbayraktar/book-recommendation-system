@@ -13,11 +13,13 @@ public interface BookRepository extends JpaRepository<Book, String> {
 
     Page<Book> findByTitleContainingIgnoreCase(String title, Pageable pageable);
 
-    Page<Book> findByCategoriesContainingIgnoreCase(String category, Pageable pageable);
+    Page<Book> findByGenresContainingIgnoreCase(String genre, Pageable pageable);
 
-    @Query("SELECT DISTINCT b.categories FROM Book b WHERE b.categories IS NOT NULL AND b.categories <> ''")
-    List<String> findAllCategories();
+    boolean existsByIsbnAndTitleCompleteIsNotNull(String isbn);
 
-    @Query("SELECT b FROM Book b WHERE LOWER(b.categories) LIKE LOWER(CONCAT('%', :category, '%'))")
-    List<Book> findByCategoryLike(@Param("category") String category);
+    @Query("SELECT DISTINCT b.genres FROM Book b WHERE b.genres IS NOT NULL AND b.genres <> ''")
+    List<String> findAllGenres();
+
+    @Query("SELECT b FROM Book b WHERE LOWER(b.genres) LIKE LOWER(CONCAT('%', :genre, '%'))")
+    List<Book> findByGenreLike(@Param("genre") String genre);
 }
