@@ -1,4 +1,11 @@
 services:
+  recommender:
+    build:
+      context: ./recommender-service
+    container_name: book_recommendation_recommender
+    ports:
+      - "8000:8000"
+
   postgres:
     image: postgres:16
     container_name: book_recommendation_postgres
